@@ -3,7 +3,6 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 @csrf_exempt
-class WebHook_Handler(View):
-    def main_site(request):
-        print("Dane\n",request.body)
-        return render(request,'link_app/main.html')
+def main_site(request):
+    print("Dane\n",request.body)
+    return render(request,'link_app/main.html')

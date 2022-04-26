@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from link_app.views import WebHook_Handler
+from link_app.views import main_site
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('update/',WebHook_Handler.main_site,name="main_site"),
+    path('update/',main_site,name="main_site"),
 ]
