@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
-@ensure_csrf_cookie
+@csrf_exempt
 def main_site(request):
     print("Dane\n",request.body)
     return render(request,'link_app/main.html')
