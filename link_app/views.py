@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from rest_framework.decorators import api_view
+from django.views import View
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
-@api_view
-def main_site(request):
-    print("Dane\n",request.body)
-    return render(request,'link_app/main.html')
+@csrf_exempt
+class WebHook_Handler(View):
+    def main_site(request):
+        print("Dane\n",request.body)
+        return render(request,'link_app/main.html')
