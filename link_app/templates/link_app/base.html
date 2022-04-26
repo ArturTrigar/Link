@@ -1,0 +1,14 @@
+{% load static %}
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Linker</title>
+        <link rel="stylesheet" type="text/css" href=" {% static 'css/styles.css' %} ">
+    </head>
+    <body>
+        <div class="div_test"><h1>Linker</h1></div>
+        <div>{%block content%}
+            {%endblock%}
+        </div>
+    </body>
+</html>
