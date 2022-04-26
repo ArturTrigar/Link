@@ -19,5 +19,5 @@ from link_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.main_site,name="main_site"),
+    path('update/',views.main_site,name="main_site"),
 ]
